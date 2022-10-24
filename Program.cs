@@ -26,6 +26,10 @@ namespace cs_split
 
       forprint(arr);
 
+      arr = csv.Split("カップ-");
+
+      forprint(arr);
+      
     }
 
     private static void forprint(string[] arr)
