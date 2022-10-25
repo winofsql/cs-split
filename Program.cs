@@ -38,7 +38,7 @@ namespace cs_split
 
       for (int i = 0; i < arr.Length; i++)
       {
-      Console.WriteLine($"{i} : {arr[i]}");
+        Console.WriteLine($"{i} : {arr[i]}");
       }
     }
   }
