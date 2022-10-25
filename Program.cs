@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace cs_split
 {
@@ -9,6 +9,10 @@ namespace cs_split
       string[] arr;
 
       string csv = "飲料用 ヨーグルト,鳥弁当,レーズンデニッシュ,カップ-トマトスープ,カップ-きのこスープ";
+
+      arr = csv.Split(",");
+
+      forprint(arr);
 
       arr = csv.Split(',');
 
@@ -22,14 +26,25 @@ namespace cs_split
 
       forprint(arr);
 
-      arr = csv.Split("カップ-", StringSplitOptions.None);
-
-      forprint(arr);
-
       arr = csv.Split("カップ-");
 
       forprint(arr);
-      
+
+      Console.WriteLine();
+      csv = "";
+      foreach (var col in arr)
+      {
+      	if ( csv != "" ) {
+          csv += "カップ-";
+        }
+        csv += col;
+      }
+      Console.WriteLine( csv );
+
+      Console.WriteLine();
+      var result = string.Join("カップ-", arr);
+      Console.WriteLine( result );
+
     }
 
     private static void forprint(string[] arr)
@@ -43,4 +58,3 @@ namespace cs_split
     }
   }
 }
-
